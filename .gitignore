@@ -1,0 +1,11 @@
+#Carpetas
+**/model/
+**/.vscode/
+**/venv/
+*.ipynb_checkpoints/
+
+#Archivos
+**/__py_cache__/
+**/log/
+**/logs/
+
