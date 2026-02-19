@@ -8,7 +8,7 @@ This project analyzes ATP tennis match data to predict match outcomes.
 - `src/notebooks/`: Jupyter notebooks for EDA and legacy data cleaning.
 - `src/utils/`: Helper functions.
 - `src/model/`: Trained models and result metrics.
-- `src/Instrucciones/`: Project documentation and data descriptions.
+- `Instrucciones/`: Project documentation and data descriptions.
 
 ## Setup
 
@@ -18,17 +18,13 @@ This project analyzes ATP tennis match data to predict match outcomes.
     ```
 
 2.  **Data Processing:**
-    The project uses a "Player 1 vs Player 2" data structure to avoid data leakage (knowing who won before the match starts).
-    To process the raw data:
-    ```bash
-    python src/data/process_data_v2.py
-    ```
-    This script reads from `src/data/raw`, cleans the data, encodes categorical variables, and saves the result to `src/data/processed/df_ready_for_model.csv`.
+    Open and run `src/notebooks/Limpieza.ipynb`.
+    This notebook reads from `src/data/raw`, cleans the data, and saves the result to `src/data/processed/dfLimpio.csv`.
 
 3.  **Model Training:**
     To train the models (Random Forest, AdaBoost, Logistic Regression, Bagging, XGBoost):
     ```bash
-    python src/notebooks/train.py
+    python src/train.py
     ```
     This script loads the processed data, splits it into Train (80%) and Test (20%) sets, trains the models, saves them to `src/model/`, and outputs the accuracy metrics.
 
